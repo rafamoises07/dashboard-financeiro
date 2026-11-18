@@ -1,0 +1,105 @@
+:root{--bg:#0d0f1c;--side:#10132a;--card:#161a2e;--campo:#1c2038;--borda:#252a45;--texto:#f1f2fa;--muted:#8d93b3;--roxo:#8b5cf6;--roxo-claro:#c4b5fd;--rosa:#ec6aa0;--raio:14px}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--texto);font-family:"Manrope",system-ui,sans-serif;font-size:15px;line-height:1.45}
+:focus-visible{outline:2px solid var(--roxo-claro);outline-offset:2px}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.side{background:var(--side);border-right:1px solid var(--borda);padding:28px 14px}
+.brand{font-size:21px;font-weight:700;padding:0 14px 28px}
+nav{display:grid;gap:6px}
+.nav-btn{display:flex;align-items:center;gap:12px;padding:13px 14px;border:0;border-radius:12px;background:none;color:var(--muted);font-weight:600;text-align:left}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover{color:var(--texto)}
+.nav-btn.active{background:#2a2559;color:var(--texto)}
+main{padding:32px 36px 20px;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.top h2{font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.top p{color:var(--muted);font-size:21px;margin-top:4px}
+.acoes-topo{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.periodo{display:flex;gap:8px}
+select,input:not([type=checkbox],[type=radio],[type=color]){background:var(--campo);border:1px solid var(--borda);border-radius:10px;padding:11px 12px;width:100%}
+.periodo select{width:auto;background:var(--card)}
+.primary{background:var(--roxo);border:0;border-radius:10px;padding:12px 20px;font-weight:700;color:#fff}
+.primary:hover{background:#9b72f8}
+.ghost{background:none;border:1px solid var(--borda);border-radius:10px;padding:12px 18px;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.kpi,.card{background:var(--card);border:1px solid var(--borda);border-radius:var(--raio)}
+.kpi{display:flex;align-items:center;gap:16px;padding:22px}
+.kpi p{color:var(--muted)}
+.kpi strong{display:block;font-size:26px;font-weight:800}
+.kpi .destaque{color:var(--roxo-claro)}
+.kpi .negativo{color:var(--rosa)}
+.ico{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;font-size:22px;font-weight:700;flex:none}
+.ico.up{background:#2b2655;color:var(--roxo-claro)}
+.ico.down{background:#3a2442;color:var(--rosa)}
+.graficos{display:grid;grid-template-columns:1.7fr 1fr;gap:16px;margin-bottom:20px}
+.card{padding:22px 24px;min-width:0}
+.card h3{font-size:19px;font-weight:700;margin-bottom:16px}
+.legenda{display:flex;gap:16px;color:var(--muted);font-size:13px;margin-bottom:8px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;flex:none}
+.barras{width:100%;height:auto}
+.barras text,.svg-muted{fill:var(--muted);font-size:11px}
+.svg-forte{fill:var(--texto);font-size:15px;font-weight:700}
+.rosca{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.rosca svg{width:190px;flex:none}
+.rosca ul{list-style:none;padding:0;flex:1;min-width:150px;display:grid;gap:10px}
+.rosca li{display:flex;align-items:center;color:var(--muted)}
+.rosca b{margin-left:auto;color:var(--texto)}
+.tabela{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;color:var(--muted);font-weight:600;font-size:13px;background:var(--campo);padding:11px 14px}
+th:first-child{border-radius:8px 0 0 8px}
+th:last-child{border-radius:0 8px 8px 0}
+td{padding:14px;border-bottom:1px solid var(--borda);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.num{text-align:right;font-weight:700}
+td.receita{color:var(--roxo-claro)}
+td.despesa{color:var(--rosa)}
+.rec{color:var(--roxo-claro);font-weight:700}
+.acoes button{background:none;border:0;color:var(--muted);padding:4px 8px;font-size:13px}
+.acoes button:hover{color:var(--texto)}
+.vazio{color:var(--muted);padding:18px 4px}
+.lista-cats{list-style:none;padding:0}
+.lista-cats li{display:flex;align-items:center;padding:12px 0;border-bottom:1px solid var(--borda)}
+.lista-cats small{margin-left:auto;margin-right:14px;color:var(--muted)}
+.lista-cats button{background:none;border:0;color:var(--rosa);font-size:13px}
+.form{display:grid;gap:14px}
+.form label{display:grid;gap:6px;color:var(--muted);font-size:13px;font-weight:600}
+.form input[type=color]{width:56px;height:40px;background:none;border:1px solid var(--borda);border-radius:8px;padding:2px}
+.linha{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.linha[hidden]{display:none}
+.check{display:flex!important;align-items:center;gap:10px;color:var(--texto)!important}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--campo);padding:4px;border-radius:12px}
+.seg input{position:absolute;opacity:0}
+.seg span{display:block;text-align:center;padding:10px;border-radius:9px;color:var(--muted);cursor:pointer}
+.seg input:checked+span{background:var(--roxo);color:#fff}
+.seg input:focus-visible+span{outline:2px solid var(--roxo-claro)}
+.botoes{display:flex;justify-content:flex-end;gap:10px;margin-top:6px}
+dialog{background:var(--card);color:var(--texto);border:1px solid var(--borda);border-radius:18px;padding:26px;width:min(460px,92vw);margin:auto}
+dialog::backdrop{background:rgba(5,6,14,.7)}
+.rodape{text-align:right;color:var(--muted);font-size:12px;margin-top:14px}
+[hidden]{display:none!important}
+@media (max-width:900px){
+  .kpis{grid-template-columns:1fr 1fr}
+  .graficos{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .app{grid-template-columns:1fr}
+  .side{position:fixed;bottom:0;left:0;right:0;z-index:5;padding:6px;border:0;border-top:1px solid var(--borda)}
+  .brand{display:none}
+  nav{grid-template-columns:repeat(3,1fr)}
+  .nav-btn{flex-direction:column;gap:4px;font-size:12px;padding:8px;text-align:center}
+  main{padding:20px 16px 90px}
+  .top h2{font-size:30px}
+  .top p{font-size:16px}
+  .acoes-topo{width:100%}
+  .periodo{flex:1}
+  .periodo select{flex:1}
+  #novo span{display:none}
+  .kpi{padding:16px;gap:12px}
+  .kpi strong{font-size:20px}
+  .ico{width:42px;height:42px}
+  .col-sm{display:none}
+  .linha{grid-template-columns:1fr}
+}
